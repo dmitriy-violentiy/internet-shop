@@ -8,7 +8,7 @@ export default function Item(props) {
          <h2>{props.item.title}</h2>
          <p>{props.item.desc}</p>
          <b>{props.item.price}р.</b>
-         <div className='add-to-cart'>+</div>
+         <div className='add-to-cart' onClick={() => props.onAdd(props.item)}>+</div>
       </div>
    )
 }
