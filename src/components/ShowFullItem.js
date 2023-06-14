@@ -5,7 +5,8 @@ export class ShowFullItem extends Component {
       return (
          <div className='full-item'>
             <div>
-               <img src={'./img/' + this.props.item.img} onClick={() => this.props.onShowItem(this.props.item)} />
+               <span className='close-cart' onClick={() => this.props.onShowItem(this.props.item)}>X</span>
+               <img src={'./img/' + this.props.item.img} />
                <h2>{this.props.item.title}</h2>
                <p>{this.props.item.desc}</p>
                <b>{this.props.item.price}р.</b>

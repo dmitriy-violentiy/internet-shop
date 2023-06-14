@@ -181,9 +181,24 @@ header .presentation::before {
    width: 600px;
    position: relative;
    margin: 10% auto;
-   padding: 40px 30px;
+   padding: 15px 30px;
    background: #fff;
    border-radius: 9px;
+}
+
+.close-cart {
+   float: right;
+   font-size: 20px;
+   font-weight: 600;
+   cursor: pointer;
+   transition: transform 500ms ease;
+   margin-right: -10px;
+   margin-bottom: 5px;
+}
+
+.close-cart:hover {
+   color: #00000085;
+   transform: scale(1.2);
 }
 
 main {
@@ -209,7 +224,7 @@ main .item img, .full-item img {
    cursor: pointer;
 }
 
-main .item img:hover, .full-item img:hover {
+main .item img:hover {
    transform: scale(1.05);
 }
 
