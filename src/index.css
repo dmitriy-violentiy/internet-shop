@@ -12,8 +12,9 @@ body {
 }
 
 .wrapper {
-   width: 1280px;
+   max-width: 1280px;
    margin: 50px auto;
+   padding: 0 10px;
 }
 
 header {
@@ -57,7 +58,7 @@ header .shop-cart {
    position: absolute;
    top: 30px;
    right: 0;
-   width: 450px;
+   width: 300px;
    background: #fafafa;
    -webkit-box-shadow: 8px 11px 8px 0px rgba(34, 60, 80, 0.2);
    -moz-box-shadow: 8px 11px 8px 0px rgba(34, 60, 80, 0.2);
@@ -153,9 +154,9 @@ header .presentation::before {
    display: inline-block;
    background: #f2f2f2;
    border-radius: 50px;
-   padding: 10px 20px;
+   padding: 10px 15px;
    margin-bottom: 25px;
-   margin-right: 15px;
+   margin-right: 10px;
    cursor: pointer;
    border: 1px solid transparent;
    transition: all 500ms ease;
@@ -178,9 +179,9 @@ header .presentation::before {
 }
 
 .full-item > div {
-   width: 600px;
+   width: auto;
    position: relative;
-   margin: 10% auto;
+   margin: 10% 7px;
    padding: 15px 30px;
    background: #fff;
    border-radius: 9px;
@@ -205,12 +206,13 @@ main {
    display: flex;
    width: 100%;
    flex-wrap: wrap;
-   justify-content: space-between;
+   justify-content: space-around;
 }
 
 main .item {
    width: 30%;
-   margin-bottom: 50px;
+   min-width: 230px;
+   margin: 10px;
    background: #f5f5f5;
    overflow: hidden;
    position: relative;

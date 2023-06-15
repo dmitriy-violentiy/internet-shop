@@ -1,7 +1,6 @@
 import React from 'react'
 
 export default function Item(props) {
-
    return (
       <div className='item'>
          <img src={'./img/' + props.item.img} onClick={() => props.onShowItem(props.item)} />
