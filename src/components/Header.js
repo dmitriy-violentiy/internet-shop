@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { FaShoppingCart } from "react-icons/fa"
 import Order from './Order'
+import { Link } from 'react-router-dom';
 
 const showOrders = (props) => {
    let summa = 0;
@@ -27,8 +28,13 @@ export default function Header(props) {
 
    return (
       <header>
-         <div onClick={(e) => {e.stopPropagation()}}>
+         <div className='header-wrap' onClick={(e) => {e.stopPropagation()}}>
             <span className='logo'>House Staff</span>
+            <ul className='nav'>
+               <Link to="/">Главная</Link>
+               <Link to="../pages/About">Про нас</Link>
+               <Link to="../pages/Contacts">Контакты</Link>
+            </ul>
             <FaShoppingCart onClick={() => props.setCartOpen(!props.cartOpen)} className={`shop-cart-button ${props.cartOpen && 'active'}`} />
             {props.cartOpen && (
                <div className='shop-cart'>
@@ -37,11 +43,6 @@ export default function Header(props) {
                   }
                </div>
             )}
-            <ul className='nav'>
-               <li>Про нас</li>
-               <li>Контакты</li>
-               <li>Кабинет</li>
-            </ul>
          </div>
          <div className='presentation'></div>
       </header>

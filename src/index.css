@@ -9,6 +9,7 @@ body {
    background: #fff;
    font-family: 'Montserrat', sans-serif;
    font-weight: 300;
+   overflow: scroll
 }
 
 .wrapper {
@@ -19,6 +20,11 @@ body {
 
 header {
    position: relative;
+}
+
+.header-wrap {
+   display: flex;
+   justify-content: space-between;
 }
 
 header .logo {
@@ -32,13 +38,15 @@ header ul.nav {
    list-style: none;
 }
 
-header ul.nav li {
+header ul.nav a {
    margin-left: 25px;
    cursor: pointer;
    transition: opacity 500ms ease;
+   color: #000;
+   text-decoration: none;
 }
 
-header ul.nav li:hover {
+header ul.nav a:hover {
    opacity: 0.5;
 }
 
@@ -272,4 +280,18 @@ main .add-to-cart:hover,
 footer {
    text-align: center;
    margin-top: 100px;
+}
+
+.contacts {
+   border: 2px solid gray;
+   width: 400px;
+   padding: 15px 25px;
+   margin: 0 auto;
+   border-radius: 7px;
+   font-size: 18px;
+}
+
+.contacts address p a {
+   text-decoration: none;
+   color: #000;
 }
