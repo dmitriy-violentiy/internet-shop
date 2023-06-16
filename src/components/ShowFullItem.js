@@ -1,7 +1,6 @@
 import React from 'react'
 
 export default function ShowFullItem(props) {
-   console.log(props)
    return (
       <div className='full-item'>
          <div>

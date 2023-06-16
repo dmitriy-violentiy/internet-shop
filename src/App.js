@@ -189,7 +189,7 @@ export default function App(props) {
    }, [])
 
    let onShowItem = (item) => {
-      setShowFullItem(item)
+      setfullItem(item)
       setShowFullItem(!showFullItem)
    }
 
@@ -224,7 +224,11 @@ export default function App(props) {
          <Categories chooseCategory={chooseCategory}/>
          <Items onShowItem={onShowItem} items={currentItems} onAdd={addToOrder}/>
 
-         {showFullItem && <ShowFullItem onAdd={addToOrder} onShowItem={onShowItem} item={fullItem} />}
+         {showFullItem && 
+
+            <ShowFullItem onAdd={addToOrder} onShowItem={onShowItem} item={fullItem} />
+   
+         }
          <Footer/>
       </div>  
    )
