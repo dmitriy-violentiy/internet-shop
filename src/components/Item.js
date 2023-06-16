@@ -5,7 +5,6 @@ export default function Item(props) {
       <div className='item'>
          <img src={'./img/' + props.item.img} onClick={() => props.onShowItem(props.item)} />
          <h2>{props.item.title}</h2>
-         <p>{props.item.desc}</p>
          <b>{props.item.price}р.</b>
          <div className='add-to-cart' onClick={() => props.onAdd(props.item)}>+</div>
       </div>

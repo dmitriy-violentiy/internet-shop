@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function ShowFullItem(props) {
    return (
-      <div className='full-item'>
-         <div>
+      <div className='full-item' onClick={() => props.onShowItem(props.item)}>
+         <div onClick={(e) => e.stopPropagation()}>
             <span className='close-cart' onClick={() => props.onShowItem(props.item)}>X</span>
             <img src={'./img/' + props.item.img} />
             <h2>{props.item.title}</h2>

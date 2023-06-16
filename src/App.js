@@ -135,7 +135,7 @@ export default function App(props) {
             id: 1,
             title: 'Сумка 1',
             img: 'product1.jpg',
-            desc: 'Text desc',
+            desc: 'Описание сумки 1',
             category: 'small bag',
             price: '23'
          },
@@ -143,7 +143,7 @@ export default function App(props) {
             id: 2,
             title: 'Сумка 2',
             img: 'product2.jpg',
-            desc: 'Text desc',
+            desc: 'Описание сумки 2',
             category: 'small bag',
             price: '11'
          },
@@ -151,7 +151,7 @@ export default function App(props) {
             id: 3,
             title: 'Сумка 3',
             img: 'product3.jpg',
-            desc: 'Text desc',
+            desc: 'Описание сумки 3',
             category: 'big bag',
             price: '23'
          },
@@ -159,7 +159,7 @@ export default function App(props) {
             id: 4,
             title: 'Сумка 4',
             img: 'product4.jpg',
-            desc: 'Text desc',
+            desc: 'Описание сумки 4',
             category: 'small bag',
             price: '22'
          },
@@ -167,7 +167,7 @@ export default function App(props) {
             id: 5,
             title: 'Сумка 5',
             img: 'product5.jpg',
-            desc: 'Text desc',
+            desc: 'Описание сумки 5',
             category: 'big bag',
             price: '50'
          },
@@ -175,7 +175,7 @@ export default function App(props) {
             id: 6,
             title: 'Сумка 6',
             img: 'product5.jpg',
-            desc: 'Text desc',
+            desc: 'Описание сумки 6',
             category: 'big bag',
             price: '50'
          }
