@@ -177,6 +177,8 @@ header .presentation::before {
    z-index: 9999;
    overflow: auto;
    padding-top: 5%;
+   padding-left: 7px;
+   padding-right: 7px;
 }
 
 .full-item > div {

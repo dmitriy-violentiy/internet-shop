@@ -25,14 +25,12 @@ const showNothing = () => {
 
 export default function Header(props) {
 
-   let [cartOpen, setCartOpen] = useState(false)
-
    return (
       <header>
-         <div>
+         <div onClick={(e) => {e.stopPropagation()}}>
             <span className='logo'>House Staff</span>
-            <FaShoppingCart onClick={() => setCartOpen(cartOpen = !cartOpen)} className={`shop-cart-button ${cartOpen && 'active'}`} />
-            {cartOpen && (
+            <FaShoppingCart onClick={() => props.setCartOpen(!props.cartOpen)} className={`shop-cart-button ${props.cartOpen && 'active'}`} />
+            {props.cartOpen && (
                <div className='shop-cart'>
                   {props.orders.length > 0 ? 
                      showOrders(props) : showNothing()

@@ -125,8 +125,9 @@ import Items from "./components/Items";
 import Categories from "./components/Categories";
 import ShowFullItem from "./components/ShowFullItem";
 
-export default function App(props) {
+export default function App() {
 
+   let [cartOpen, setCartOpen] = useState(false)
    let [orders, setOrders] = useState([])
    let [currentItems, setCurrentItems] = useState([])
    let [items, setItems] = useState(
@@ -219,18 +220,16 @@ export default function App(props) {
    }
 
    return (
-      <div className="wrapper">
-         <Header orders={orders} onDelete={deleteOrder}/>
-         <Categories chooseCategory={chooseCategory}/>
-         <Items onShowItem={onShowItem} items={currentItems} onAdd={addToOrder}/>
+      <div className="wrapper" onClick={() => setCartOpen(false)}>
+            <Header orders={orders} onDelete={deleteOrder} cartOpen={cartOpen} setCartOpen={setCartOpen} />
+            <Categories chooseCategory={chooseCategory}/>
+            <Items onShowItem={onShowItem} items={currentItems} onAdd={addToOrder}/>
 
-         {showFullItem && 
-
-            <ShowFullItem onAdd={addToOrder} onShowItem={onShowItem} item={fullItem} />
-   
-         }
-         <Footer/>
-      </div>  
+            {showFullItem && 
+               <ShowFullItem onAdd={addToOrder} onShowItem={onShowItem} item={fullItem} />
+            }
+            <Footer/>
+      </div> 
    )
 
 }
